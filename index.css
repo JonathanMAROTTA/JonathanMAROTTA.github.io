@@ -1,0 +1,1153 @@
+/* Reset margin & padding **************************************************************************************************************************/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Typography **************************************************************************************************************************************/
+
+@font-face{
+    font-family: "Headline";
+    src: url(Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/fonts/Headline.woff);
+}
+
+@font-face{
+    font-family: "Cormorant-Medium";
+    src: url(Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/fonts/Cormorant-Medium.woff);
+}
+
+
+/* Scroll behavbior: smooth ; désactivé pour mode "personnes sensibles" ****************************************************************************/
+
+html{
+    scroll-behavior: smooth; 
+}
+
+@media(prefers-reduced-motion: reduce){
+    html {
+      scroll-behavior: auto;
+    }
+}
+
+
+/* Modification: changement couleur de la sélection *************************************************************************************************/
+
+::selection{
+    background-color: rgb(100, 100, 100);
+}
+
+
+/* Full-size background ****************************************************************************************************************************/
+
+#full-size-background{
+    z-index: -1;
+    background-image: radial-gradient(#1f1f1c,black);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* BODY ********************************************************************************************************************************************/
+
+body{
+    color: lightgrey;
+}
+
+.ligne{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.center{
+    text-align: center;
+}
+
+
+/* HEADER ******************************************************************************************************************************************/
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/header_background_1920x1080p.png);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    z-index: 20;
+}
+
+header .ligne{
+    align-items: stretch;
+}
+
+.colonne2{
+    display: flex;
+    justify-content: flex-end;
+    width: 92vw;
+}
+
+.colonne2 ul{
+    text-align: center;
+    border-bottom: 2px solid #F4A732;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#logo{
+    vertical-align: middle;
+    background: black;
+    width: 90px;
+    border-radius: 5px;
+    box-shadow: 7px 5px 5px #3F3F3F;
+}
+
+header li{
+    list-style-type: none;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+header li a{
+    display: flex;
+    align-items:flex-end;
+    justify-content: center;
+    color: lightgrey;
+    font-family: Headline;
+    text-transform: uppercase;
+    font-size: medium;
+    text-decoration: none;
+    width : 180px;
+    height: 20px;
+    margin: 10px;
+    margin-bottom: 0px;
+}
+
+header li a:hover{
+    color: #FFCE00;    /* doré-orangé #F4A732 ; doré_bis #F1BC4E ; doré_ter #FFCE00  */
+}
+
+.hidden_on_desktop{
+    display: none;
+}
+
+
+/* MAIN ********************************************************************************************************************************************/
+
+main{
+    margin-right: 60px;
+}
+
+main h1{
+    font-family: Headline;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: x-large;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+main img{
+    text-align: center;
+}
+
+.article{
+    padding-top: 150px;
+    min-height: 85vh;
+    font-family: Cormorant-Medium;
+    font-size: x-large;
+}
+
+.round{
+    border-radius: 50%;
+    width: 350px;
+}
+
+main a{
+    color: lightgray;
+}
+
+main a:visited{
+    color: lightgrey;
+}
+
+.align_top{
+    vertical-align: top;
+}
+
+iframe {
+    border: none;
+}
+
+
+/* A PROPOS ****************************************************************************************************************************************/
+
+#à_propos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#à_propos img{
+    max-width: 250px;
+}
+
+#à_propos .over_top{
+    position: relative;
+    z-index: 10;
+    animation-fill-mode: both;
+    animation-delay: 0.75s;
+    animation-duration: 1s;
+    animation-name: fadeOut;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 0%;
+    } 
+    to{
+        opacity: 100%;
+    }
+}
+
+#à_propos .behind_left{
+    z-index: 8;
+    animation-fill-mode: both;
+    animation-delay: 1.55s;
+    animation-duration: 0.8s;
+    animation-name: expand_left;
+    animation-iteration-count: 1;
+}
+
+@keyframes expand_left{
+    from{
+        display: none;
+        position: relative;
+        left: 257px;
+    }
+    to{
+        position: relative;
+        left: 70px;
+    }
+}
+
+#à_propos .behind_right{
+    z-index: 8;
+    animation-fill-mode: both;
+    animation-delay: 1.55s;
+    animation-duration: 0.8s;
+    animation-name: expand_right;
+    animation-iteration-count: 1;
+}
+
+@keyframes expand_right{
+    from{
+        display: none;
+        position: relative;
+        right:257px;
+    }
+    to{
+        position: relative;
+        right: 70px;
+    }
+}
+
+.behind_center_left{
+    position: relative;
+    left: 514px;
+    z-index: 9;
+    animation-fill-mode: both;
+    animation-delay: 0.75s;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+}
+
+.behind_center_right{
+    position: relative;
+    right: 514px;
+    z-index: 9;
+    animation-fill-mode: both;
+    animation-delay: 1.75s;
+    animation-duration: 0.05s;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 100%;
+    } 
+    to{
+        opacity: 0%;
+    }
+}
+
+
+/* TABLES ******************************************************************************************************************************************/
+
+#ExpPro article{
+    margin-right: 60px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    color: lightgrey;
+    padding: 8px;
+    border: #F4A732 solid 1px;
+    min-width: 118px;
+}
+
+table ul{
+    padding-left: 30px;
+}
+
+table li{
+    padding-left: 5px;
+}
+
+#ExpPro tr td:nth-child(1){
+    max-width:200px;
+}
+
+#ExpPro tr td:nth-child(2){
+    max-width: 1350px;
+}
+
+.société{
+    font-weight: bold;
+    text-shadow: 2px 2px 3px darkgrey;
+}
+
+
+/* COMPETENCES *************************************************************************************************************************************/
+
+#Comp{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#Comp .colonne{
+    display: flex;
+    flex-direction: column;
+}
+
+.ligne_juxt{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.colonne_juxt{
+    margin: 0 50px 0 0;
+    width: 25%;
+    min-width: 292px;
+    border: 1px #F4A732 solid;
+    border-radius: 10px;
+}
+
+.colonne_juxt2{
+    width: 50%;
+}
+
+#Comp h2{
+    font-size: x-large;
+    margin: 20px 0px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: #F4A732 1px solid;
+}
+
+h3{
+    font-size: x-large;
+    margin: 20px 0px 20px 30px; 
+}
+
+#Comp p{
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
+}
+
+#Comp .padding_bottom{
+    padding-bottom: 20px;
+}
+
+#Comp img{
+    max-height: 40px;
+}
+
+#Comp .real_size{
+    max-width: 90%;
+    max-height: 999px;
+    margin: 2px 5%;
+}
+
+i{
+    font-style: normal;
+}
+
+
+/* REALISATIONS ************************************************************************************************************************************/
+
+#Réal{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#Réal h2{
+    font-size: x-large;
+    margin: 20px 0px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+#Réal img{
+    max-width: 500px;
+    max-height : 350px;
+    margin: 10px 0px;
+}
+
+#Réal marquee{
+    max-width: 70vw;
+    margin: 0 9%;
+}
+
+.marquee_centered{
+    display: flex;
+    justify-content: center;
+}
+
+#Réal .not_moving{
+    max-width : 25%;
+    max-height : 350px;
+    margin: 10px 0px;
+}
+
+
+/* CENTRES d'INTERETS ******************************************************************************************************************************/
+
+#CentrInt .ligne_juxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#CentrInt .colonne_juxt2{
+    width: 80vw;
+    margin: 30px 0px;
+    padding: 30px;
+}
+
+#CentrInt .ligne_juxt2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#CentrInt .colonne_juxt3{
+    width: 50%;
+}
+
+#CentrInt h2{
+    margin-bottom: 20px;
+}
+
+#CentrInt p{
+    margin-left: 30px;
+}
+
+#CentrInt figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#CentrInt figcaption{
+    margin: 20px;
+    caption-side: top;
+}
+
+#CentrInt img{
+    max-height: 300px;
+    margin : 20px 0px;
+}
+
+#CentrInt iframe{
+    max-height: 300px;
+    margin : 20px 0px;
+}
+
+
+/* TOP_BUTTON **************************************************************************************************************************************/
+
+.fixed{
+    position: fixed;
+    top: 89%;
+    left: 94%;
+    width: 60px;
+}
+
+
+/* CONTACT *****************************************************************************************************************************************/
+
+.article2{
+    text-align: center;
+    padding-top: 300px;
+    min-height: 66vh;
+    min-width: 100vw;
+    font-family: Cormorant-Medium;
+    font-size: x-large;
+}
+
+.article2 p{
+    margin : 30px;
+    padding: 5px;
+    width: 600px;
+}
+
+.article2 img{
+    width: 70px;
+}
+
+.ligne3{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.ligne3 img{
+    width: 45px;
+}
+
+.ligne4{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.ligne_checkbox p{
+    margin-top: 0px;
+    width: 640px;
+}
+
+.ligne_checkbox .colonne3 img{
+    width: 15px;
+}
+
+.colonne4{
+    padding-top: 5px;
+}
+
+
+/* CONTACT_FORM ************************************************************************************************************************************/
+
+.form_row{
+    display: flex;
+    flex-direction: column;
+}
+
+.form_row label{
+    z-index: 2;
+    font-family: Cormorant-Medium;
+    font-size: x-large;
+    color: lightgrey;
+    line-height: 30px;
+    padding: 10px;
+}
+    
+.form_row input[type=text]{
+    min-width: 423px;
+    max-width: 423px;
+    background: none;
+    z-index: 3;
+    border: 1px solid #F4A732;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+    opacity: 1;
+    overflow: auto;
+}
+
+.form_row input[type=email]{
+    min-width: 423px;
+    max-width: 423px;
+    background: none;
+    z-index: 3;
+    border: 1px solid #F4A732;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+    opacity: 1;
+    overflow: auto;
+}
+
+.form_row input[type=tel]{
+    min-width: 423px;
+    max-width: 423px;
+    background: none;
+    z-index: 3;
+    border: 1px solid #F4A732;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+    opacity: 1;
+    overflow: auto;
+}
+
+.form_row input[type=submit]{
+    background: none;
+    z-index: 3;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+    opacity: 1;
+    overflow: auto;
+}
+
+.form_row textarea{
+    min-height: 180px;
+    max-height: 180px;
+    min-width: 423px;
+    max-width: 423px;
+    background: none;
+    z-index: 3;
+    border: 1px solid #F4A732;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+    opacity: 1;
+}
+
+.envoyer{
+    text-decoration: none;
+}
+
+
+/* ASIDE *******************************************************************************************************************************************/
+
+aside .ligne3{
+    position: fixed;
+    top: 75%;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+aside p{
+    display: flex;
+    align-items: center;
+    margin: 4px;
+}
+
+aside p a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+}
+
+a[href^="mailto:"]{
+    text-decoration: none;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+}
+
+a[href^="tel:"]{
+    text-decoration: none;
+    font-family: Cormorant-Medium;
+    font-size: large;
+    color: lightgrey;
+}
+
+aside a:hover{
+    color: #FFCE00;
+}
+
+
+/* FOOTER ******************************************************************************************************************************************/
+
+footer{
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    display: inline;
+    vertical-align: middle;
+    height: 10vh;
+    padding: 10px;
+}
+
+footer p{
+    vertical-align: text-bottom;
+    margin: 0;
+}
+
+
+/* Media Queries ***********************************************************************************************************************************/
+
+
+/* Screen Resolution = 2560 x 1600 ******************************************************/
+
+@media screen and (min-width:1921px){
+
+    .article{
+        padding-top: 150px;
+    }
+
+    header{
+        background-image: url(Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/header_background_2560x1440p.png);
+    }
+
+    header li{
+        font-size: medium;
+    }    
+
+    #à_propos img{
+        max-width: 330px;
+    }
+
+    #à_propos .behind_left{
+        left: 90px;
+    }
+
+    @keyframes expand_left{
+        from{
+            position: relative;
+            left: 339px;
+        }
+        to{
+            position: relative;
+            left: 90px;
+        }
+    }
+    
+    #à_propos .behind_right{
+        right: 90px;
+    }
+
+    @keyframes expand_right{
+        from{
+            position: relative;
+            right: 337px;
+        }
+        to{
+            position: relative;
+            right: 90px;
+        }
+    }
+
+    .behind_center_left{
+        left: 676px;
+    }
+
+    .behind_center_right{
+        right: 674px;
+    }
+
+    .article2{
+        padding-top: 300px;
+        min-height: 71vh;
+    }
+
+    .article2 p{
+        margin : 0px;
+        width: 800px;
+    }
+
+    .form_row input[type=text]{
+        min-width: 583px;
+        max-width: 583px;
+    }
+
+    .form_row input[type=email]{
+        min-width: 583px;
+        max-width: 583px;
+    }
+
+    .form_row input[type=tel]{
+        min-width: 583px;
+        max-width: 583px;
+    }
+
+    .form_row textarea{
+        min-height: 250px;
+        max-height: 250px;
+        min-width: 583px;
+        max-width: 583px;
+    }
+
+    aside .ligne3{
+        position: fixed;
+        top: 75%;
+        left: 60px;
+    }
+}
+
+
+/* Screen Resolution < 1500 x ... *******************************************************/
+
+@media screen and (min-width:721px) and (max-width:1500px){
+
+    header{
+        position: relative;
+        top: 0;
+        left: 0;
+        max-height: 95vh;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        z-index: 20;
+        background-image: none;
+    }
+
+    header .ligne{
+        flex-direction: row;
+    }
+
+    header .colonne2{
+    margin-right: 100px;
+    }
+
+    .colonne2{
+        display: flex;
+        justify-content: center;
+        width: 92vw;
+    }
+    
+    .colonne2 ul{
+        text-align: center;
+        border-bottom: 2px solid #F4A732;
+        margin-left: 60px;
+        margin-right: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .article{
+        padding-top: 150px;
+    }
+
+    #à_propos{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    #à_propos .colonne{
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: nowrap; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    #à_propos img{
+        max-width: 220px;
+    }
+
+    #à_propos .behind_left{
+        left: 90px;
+    }
+
+    @keyframes expand_left{
+        from{
+            position: relative;
+            left: 220px;
+        }
+        to{
+            position: relative;
+            left: 90px;
+        }
+    }
+    
+    #à_propos .behind_right{
+        right: 90px;
+    }
+
+    @keyframes expand_right{
+        from{
+            position: relative;
+            right: 220px;
+        }
+        to{
+            position: relative;
+            right: 90px;
+        }
+    }
+
+    .behind_center_left{
+        left: 440px;
+    }
+
+    .behind_center_right{
+        right: 440px;
+    }
+
+    #Comp .ligne_juxt {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #Comp .colonne_juxt {
+        width: 41%;
+        margin: 30px;
+    }
+
+    #CentrInt img, iframe{
+        max-width: 70%;
+    }
+
+    .fixed{
+        position: fixed;
+        top: 89%;
+        left: 90%;
+        width: 50px;
+    }
+
+    .article2{
+        font-size: medium;
+        padding-top: 30px;
+    }
+    
+    .article2 p{
+        margin : 30px;
+        padding: 5px;
+        width: 600px;
+    }
+
+    .form_row label{
+        font-size: medium;
+    }
+        
+    .form_row input[type=text]{
+        font-size: medium;
+    }
+    
+    .form_row input[type=email]{
+        font-size: medium;
+    }
+    
+    .form_row input[type=tel]{
+        font-size: medium;
+    }
+    
+    .form_row input[type=submit]{
+        font-size: medium;
+    }
+    
+    .form_row textarea{
+        font-size: medium;
+    }
+
+    aside p a{
+        font-size: medium;
+    }
+    
+    a[href^="mailto:"]{
+        font-size: medium;
+    }
+    
+    a[href^="tel:"]{
+        font-size: medium;
+    }
+}
+
+
+/* Printing properties ******************************************************************/
+
+@media print{
+
+    .no_print, .no_print *{
+        display: none;
+        max-height: 0;
+    }
+
+    html *{
+        font-size: x-small;
+        color : black;
+    }
+
+    header{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    header li a{
+        font-size: small;
+        color: darkgray;
+    }
+
+    #logo{
+        width: 90px;
+    }
+
+    main{
+        position: absolute;
+        top: 20%;
+    }
+
+    .article{
+        padding-top: 15px;
+        min-height: 1vh;
+        font-family: Cormorant-Medium;
+        font-size: x-large;
+    }
+
+    /* table{
+        page-break-inside: avoid;
+        break-inside: avoid;
+    } */
+
+    table{
+        font-size: small;
+    }
+
+    #Formation tr td:nth-child(2){
+        max-width: 650px;
+    }
+
+    #ExpPro{
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    #ExpPro tr td:nth-child(2){
+        max-width: 700px;
+    }
+
+    .société a{
+        text-decoration: none;
+        color: black;
+    }
+
+    #Comp{
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    #Comp .ligne_juxt {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    #Comp .colonne_juxt {
+        max-width: 100px;
+        margin: 20px;
+        border: 1px #F4A732 solid;
+        border-radius: 10px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    i a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .article2{
+        padding-top: 0px;
+        font-size: small;
+        color: black;
+    }
+
+    .form_row label{
+        font-size: small;
+        color: black;
+    }
+        
+    .form_row input[type=text]{
+        font-size: x-small;
+        color: black;
+    }
+    
+    .form_row input[type=email]{
+        font-size: x-small;
+        color: black;
+    }
+    
+    .form_row input[type=tel]{
+        font-size: x-small;
+        color: black;
+    }
+    
+    .form_row input[type=submit]{
+        font-size: x-small;
+        color: black;
+    }
+    
+    .form_row textarea{
+        font-size: x-small;
+        color: black;
+    }
+
+    aside p{
+        font-size: x-small;
+    }
+
+    aside p a{
+        font-size: x-small;
+        text-decoration: none;
+        color: black;
+    }
+    
+    a[href^="mailto:"]{
+        font-size: x-small;
+        color: black;
+    }
+    
+    a[href^="tel:"]{
+        font-size: x-small;
+        color: black;
+    }
+}

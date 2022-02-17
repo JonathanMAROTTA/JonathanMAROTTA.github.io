@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jonathan MAROTTA">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan MAROTTA - Contact</title>
+    <link rel="stylesheet" media="screen and (min-width:721px)" href="index.css" />
+    <link rel="stylesheet" media="screen and (max-width:720px)" href="index_mobile.css" />
+    <link rel="stylesheet" media="print" href="index.css" />
+    <link rel="shortcut icon" href="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/favicon.ico">
+</head>
+
+<body>
+    <!--*************** STATIC BACKGROUND *********************************************************************************************************************************************************************************************************-->
+    <div id="full-size-background"></div>
+
+    <!--*************** HEADER ********************************************************************************************************************************************************************************************************************-->
+    <header>
+        <div class="ligne">
+            <div class="colonne">
+                <a href="index.html#"><img src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/favicon.ico" alt="logo site lettrine J M" id="logo" /></a> <!-- modification du contenu des balises ALT pour lecture aux personnes malvoyantes-->
+            </div>
+
+            <div class="colonne colonne2">
+                <ul>
+                    <li class="hidden_on_desktop"><a href="index.html#à_propos" target="_self">A propos</a></li>
+                    <li><a href="index.html#Formation" target="_self">Formation</a></li>
+                    <li><a href="index.html#ExpPro" target="_self">Exp. Professionnelles</a></li>
+                    <li><a href="index.html#Comp" target="_self">Compétences</a></li>
+                    <li><a href="index.html#Réal" target="_self">Réalisations</a></li>
+                    <li><a href="index.html#CentrInt" target="_self">Centres d'Intérêt</a></li>
+                    <li><a href="contact.html" target="_self">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="colonne hidden_on_desktop">
+                <a href="#aside"><img class="round upside_down" src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/top_button.png" alt="bouton retour en haut de page"></a>
+            </div>
+        </div>
+    </header>
+
+    <!--*************** MAIN **********************************************************************************************************************************************************************************************************************-->
+    <main class="hidden_on_mobile">
+        <div class="article2">
+            <div class="ligne">
+                <div class="colonne">
+                    <form class="form_row" method="post">
+                        <div class="ligne3">
+                            <div class="colonne3">
+                                <label for="name">Nom * :</label>
+                            </div>
+    
+                            <div class="colonne3">
+                                <input type="text" id="name" name="name" placeholder="Entrez ici votre nom." required minlength="4" maxlength="25" size="50" required>
+                            </div>
+                        </div>
+                       
+                        <div class="ligne3">
+                            <div class="colonne3">
+                                <label for="email">Email * :</label>
+                            </div>
+                            
+                            <div class="colonne3">
+                                <input type="email" id="email" name="email" placeholder="Entrez ici votre adresse mail." required minlength="4" maxlength="25" size="50" required>
+                            </div>
+                        </div>
+                        
+                        <div class="ligne3">
+                            <div class="colonne3">
+                                <label for="phone_number">N° de téléphone * :</label>
+                            </div>
+                            <div class="colonne3">
+                                <input type="tel" id="phone_number" name="phone_number" placeholder="Entrez ici votre n° de téléphone." required minlength="4" maxlength="25" size="50" required>
+                            </div>
+                        </div>
+                        
+                        <div class="ligne4">
+                            <div class="colonne4">
+                                <label class="contact_message" for="message">Message * :</label>
+                            </div>
+                            
+                            <div class="colonne3">
+                                <textarea id="message" name="message" placeholder="Entrez ici votre message." required minlength="4" maxlength="500" required></textarea>
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="ligne_checkbox">
+                            <div class="colonne3">
+                                <p>
+                                    <input id='btn_Accord' name="btn_Accord" type="checkbox" value="Accord"> &nbsp;
+                                    J'autorise l'utilisation des données entrées dans ces champs *
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="ligne_checkbox">
+                            <div class="colonne3">
+                                    <input id='btn_Valider' name="btn_Valider" type="submit" value="Envoyer"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--*************** ASIDE *********************************************************************************************************************************************************************************************************************-->
+    <aside id=aside>
+        <div class="ligne3">
+            <div class="colonne">
+                <p><a href="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/Jonathan_MAROTTA_CV.pdf" target="_blank"><img src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/icone_téléchargement.png" alt="icone téléchargement" class="round">&nbsp; &nbsp;Télécharger mon CV</a></p>
+            </div>
+
+            <div class="colonne">
+                <p><a href="http://github.com/JonathanMAROTTA" target="_blank"><img src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/icone_github.png" alt="icone github" class="round">&nbsp; &nbsp;Mon profil GitHub</a></p>
+            </div>
+
+            <div class="colonne">
+                <p><a href="tel:0033623809469" data-rel="external"><img src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/icone_contact_phone.png" alt="icone téléphone" class="round">&nbsp; &nbsp;(+33) 6-23-80-94-69</a></p>
+            </div>
+
+            <div class="colonne">
+                <p><a href="mailto:jonathan.marotta57@gmail.com"><img src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/icone_contact_mail.png" alt="icone email" class="round">&nbsp; &nbsp;jonathan.marotta57@gmail.com</a></p>
+            </div>
+
+            <div class="colonne">
+                <p><img src="Jonathan_MAROTTA_Mon_CV_en_ligne_fichiers/pictures/icone_contact_home.png" alt="icone adresse" class="round">&nbsp; &nbsp;Boust (57570)</p>
+            </div>
+        </div>
+    </aside>
+
+    <!--*************** FOOTER ********************************************************************************************************************************************************************************************************************-->
+    <footer class="no_print">
+        <div class="ligne center">
+            <div class="colonne">
+                <p class="center">©2022 par Jonathan MAROTTA. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
