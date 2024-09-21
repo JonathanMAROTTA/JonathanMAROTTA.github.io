@@ -521,6 +521,9 @@ i{
 }
 
 #CentrInt iframe{
+    min-width: 535px;
+    max-width: 535px;
+    min-height: 300px;
     max-height: 300px;
     margin : 20px 0px;
 }
@@ -1039,7 +1042,7 @@ footer p{
 }
 
 
-/* Screen Resolution < 1500 x ... *******************************************************/
+/* Screen Resolution "windowed mode" (height < 900px) *******************************************************/
 @media screen and (max-height: 900px){ 
     .hidden_on_desktop{
         display: flex;
@@ -1086,11 +1089,6 @@ footer p{
         font-family: Cormorant-Medium;
         font-size: x-large;
     }
-
-    /* table{
-        page-break-inside: avoid;
-        break-inside: avoid;
-    } */
 
     table{
         font-size: small;
